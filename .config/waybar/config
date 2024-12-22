@@ -1,0 +1,40 @@
+
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 3,
+"margin-left": 8,
+"margin-right": 8,
+"output": "DVI-D-1",
+
+"modules-left": [
+	"group/mobo_drawer",
+	],
+
+"modules-center": [
+	"custom/swaync",
+	"custom/separator#line",
+	"hyprland/workspaces#numbers",
+	"custom/separator#dot-line",
+	], 
+
+"modules-right": [
+	"custom/separator#dot-line",
+	"custom/weather",
+	"custom/separator#dot-line",
+	"clock",
+	"group/connections",
+	"custom/separator#line",
+	"custom/cava_mviz",
+	"group/audio",
+	"custom/separator#line",
+	"tray",
+	],
+}
