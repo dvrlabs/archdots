@@ -1,7 +1,7 @@
 #!/bin/bash
 
-configs="$HOME/.config/hypr"
 terminal="kitty -e"
+configs="$HOME/.config/hypr"
 
 # Dynamically generate menu based on *.conf files in configs
 generate_menu() {
