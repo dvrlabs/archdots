@@ -46,9 +46,10 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 # Path
 export PATH="$PATH:$HOME/.local/bin"
 
-
-# Example of running script via the launcher.
+# A function that can be used in a runner, with alias. 
 hello_world_f() {
     notify-send "Hello World!"
 }
 alias hello_world='hello_world_f'
+
+source ~/work/shell-scripts/aliases.zsh
