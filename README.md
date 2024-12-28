@@ -42,6 +42,27 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
+# Removing README.md (this file)
+
+1. Change to home
+```bash
+cd
+```
+2. skip-worktree for README.md
+```bash
+git update-index --skip-worktree README.md
+```
+
+3. Remove the file
+```bash
+rm README.md
+```
+
+4. Ensure dotfiles doesn't care
+```bash
+dotfiles status
+```
+
 # Done!
 
 You should now be able to manage your dotfiles with the ```dotfiles``` alias as though it were git.
