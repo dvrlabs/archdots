@@ -15,6 +15,13 @@
 	"exec-if": "ping wttr.in -c1",
 	"tooltip": true,
 },
+"custom/sleep_status": {
+	"format": " {} ",
+	"exec": "~/.config/hypr/scripts/check_sleep_status.sh",
+	"return-type": "json",
+	"tooltip": true,
+	"interval": 10
+},
 "temperature": {
 	"interval": 10,
 	"tooltip": true,

@@ -218,3 +218,11 @@ tooltip label {
 	min-width: 10px;
 	border-radius: 5px;
 }
+
+#custom-sleep_status.enabled {
+    color: green;
+}
+
+#custom-sleep_status.disabled {
+    color: red;
+}

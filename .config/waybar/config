@@ -19,6 +19,7 @@
 	],
 
 "modules-center": [
+	"custom/sleep_status",
 	"custom/swaync",
 	"custom/separator#line",
 	"hyprland/workspaces#numbers",
