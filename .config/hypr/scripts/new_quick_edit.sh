@@ -5,6 +5,7 @@ categories_list=(
     "ZSH,$HOME,.zshrc"
     "Kitty,$HOME/.config/kitty/,conf;bak"
     "Hyprland,$HOME/.config/hypr,conf;json"
+    "Scripts,$HOME/.config/hypr/scripts,sh"
     "Neovim,$HOME/.config/nvim/lua,lua"
     "Neovim Plugins,$HOME/.config/nvim/lua/plugins,lua"
 )
