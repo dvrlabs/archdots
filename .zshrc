@@ -35,18 +35,21 @@ source ~/.zsh/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.zsh/zsh-bat/zsh-bat.plugin.zsh
 
 # Aliases
+alias e='$EDITOR'
+alias o='xdg-open'
 alias ls='ls --color=auto'
-alias tm="trash-put"
 alias rm='echo '\''Use \\rm or trash-put.'\''; false'
+alias tm="trash-put"
 alias tl="trash-list"
 alias te="trash-empty"
+alias rt="trash-restore"
 alias icat="kitty +kitten icat"
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # Path
 export PATH="$PATH:$HOME/.local/bin"
 
-# A function that can be used in a runner, with alias. 
+# A function that can be used in a runner, with alias.
 hello_world_f() {
     notify-send "Hello World!"
 }
