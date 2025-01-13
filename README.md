@@ -42,6 +42,11 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
+# Install submodules
+```bash
+dotfiles submodule update --init
+```
+
 # Removing README.md (this file)
 
 1. Change to home
@@ -50,12 +55,12 @@ cd
 ```
 2. skip-worktree for README.md
 ```bash
-git update-index --skip-worktree README.md
+dotfiles update-index --skip-worktree README.md
 ```
 
 3. Remove the file
 ```bash
-rm README.md
+\rm README.md
 ```
 
 4. Ensure dotfiles doesn't care
