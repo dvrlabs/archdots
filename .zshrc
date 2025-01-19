@@ -55,4 +55,3 @@ hello_world_f() {
 }
 alias hello_world='hello_world_f'
 
-source ~/work/shell-scripts/aliases.zsh
