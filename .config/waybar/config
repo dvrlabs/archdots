@@ -12,9 +12,11 @@
 "margin-top": 3,
 "margin-left": 8,
 "margin-right": 8,
-"output": "DVI-D-1",
+"output": "eDP-1",
 
 "modules-left": [
+	"group/laptop",
+	"custom/separator#line",
 	"group/mobo_drawer",
 	],
 
