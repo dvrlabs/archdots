@@ -33,7 +33,7 @@ source .bashrc
 # Move the config files into your system 
 
 ```bash
-dotfiles checkout
+dotfiles checkout -f
 ```
 
 # Make sure that by default all changes are untracked
