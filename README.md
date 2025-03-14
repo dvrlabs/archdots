@@ -22,7 +22,7 @@ git clone --bare https://github.com/dvrlabs/archdots $HOME/.dotfiles
 Add the below alias to your .bashrc so we can run commands with it.
 
 ```bash
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias dots='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 ```
 
 Now restart your terminal/shell. Or:
@@ -33,18 +33,18 @@ source .bashrc
 # Move the config files into your system 
 
 ```bash
-dotfiles checkout -f
+dots checkout -f
 ```
 
 # Make sure that by default all changes are untracked
 
 ```bash
-dotfiles config --local status.showUntrackedFiles no
+dots config --local status.showUntrackedFiles no
 ```
 
 # Install submodules
 ```bash
-dotfiles submodule update --init
+dots submodule update --init
 ```
 
 # Removing README.md (this file)
@@ -55,7 +55,7 @@ cd
 ```
 2. skip-worktree for README.md
 ```bash
-dotfiles update-index --skip-worktree README.md
+dots update-index --skip-worktree README.md
 ```
 
 3. Remove the file
@@ -65,10 +65,10 @@ dotfiles update-index --skip-worktree README.md
 
 4. Ensure dotfiles doesn't care
 ```bash
-dotfiles status
+dots status
 ```
 
 # Done!
 
-You should now be able to manage your dotfiles with the ```dotfiles``` alias as though it were git.
+You should now be able to manage your dotfiles with the ```dots``` alias as though it were git.
 
