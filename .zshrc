@@ -44,7 +44,7 @@ alias tl="trash-list"
 alias te="trash-empty"
 alias rt="trash-restore"
 alias icat="kitty +kitten icat"
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias dots='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # Path
 export PATH="$PATH:$HOME/.local/bin"
@@ -54,5 +54,32 @@ hello_world_f() {
     notify-send "Hello World!"
 }
 alias hello_world='hello_world_f'
+
+# Modern recursive project search and replace.
+replace_text_f() {
+    if [[ $# -ne 2 ]]; then
+        echo "Usage: replace_text_f 'search' 'replace'"
+        return 1
+    fi
+
+    local search="$1"
+    local replace="$2"
+
+    rg -F -l "$search" | xargs sd -s "$search" "$replace"
+}
+alias re='replace_text_f'
+
+# Modern recursive project search
+search_text_f() {
+    if [[ $# -ne 1 ]]; then
+        echo "Usage: search_text_f 'search'"
+        return 1
+    fi
+
+    local search="$1"
+
+    rg -F "$search"
+}
+alias se='search_text_f'
 
 source ~/work/shell-scripts/aliases.zsh
