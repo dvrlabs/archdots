@@ -66,6 +66,9 @@ replace_text_f() {
     local replace="$2"
 
     rg -F -l "$search" | xargs sd -s "$search" "$replace"
+
+    # Show changes
+    rg -F "$replace"
 }
 alias re='replace_text_f'
 
