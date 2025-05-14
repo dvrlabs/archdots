@@ -58,17 +58,17 @@ alias hello_world='hello_world_f'
 # Modern recursive project search and replace.
 replace_text_f() {
     if [[ $# -ne 2 ]]; then
-        echo "Usage: replace_text_f 'search' 'replace'"
+        echo "Usage: replace_text_f 'search_text' 'replace_text'"
         return 1
     fi
 
     local search="$1"
     local replace="$2"
 
-    rg -F -l "$search" | xargs sd -s "$search" "$replace"
+    rg --null --fixed-strings --files-with-matches "$search" \
+        | xargs --null sd --fixed-strings "$search" "$replace"
 
-    # Show changes
-    rg -F "$replace"
+    rg --fixed-strings "$replace"
 }
 alias re='replace_text_f'
 
@@ -81,8 +81,25 @@ search_text_f() {
 
     local search="$1"
 
-    rg -F "$search"
+    rg --fixed-strings "$search"
 }
 alias se='search_text_f'
+
+
+# Edit many files by search
+edit_x_files_f() {
+    if [[ $# -ne 1 ]]; then
+        echo "Usage: edit_x_files_f 'search'"
+        return 1
+    fi
+
+    local search="$1"
+
+    rg -F -l "$search" | xargs nvim
+}
+alias ex='edit_x_files_f'
+
+
+
 
 source ~/work/shell-scripts/aliases.zsh
